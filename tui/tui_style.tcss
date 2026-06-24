@@ -1,0 +1,241 @@
+Screen {
+    background: $surface;
+}
+
+/* ── Sidebar ── */
+#sidebar {
+    width: 24;
+    background: $panel;
+    border-right: solid $primary-darken-2;
+    padding: 0 0;
+}
+
+#sidebar-title {
+    background: $primary-darken-2;
+    color: $text;
+    text-align: center;
+    padding: 1 0;
+    text-style: bold;
+    width: 100%;
+}
+
+ListView {
+    background: $panel;
+    border: none;
+    padding: 0;
+}
+
+ListItem {
+    padding: 0 1;
+    height: 3;
+    color: $text-muted;
+}
+
+ListItem:hover {
+    background: $primary-darken-1;
+    color: $text;
+}
+
+ListItem.--highlight {
+    background: $primary;
+    color: $text;
+    text-style: bold;
+}
+
+ListItem.--skipped {
+    color: $text-disabled;
+    opacity: 0.4;
+    text-style: strike;
+}
+
+ListItem.--skipped:hover {
+    background: $surface-darken-1;
+    color: $text-disabled;
+    opacity: 0.5;
+    text-style: strike;
+}
+
+/* ── Main content ── */
+#main {
+    padding: 0;
+}
+
+#step-header {
+    background: $primary-darken-2;
+    color: $text;
+    padding: 1 2;
+    height: 5;
+}
+
+#step-title {
+    text-style: bold;
+}
+
+#step-subtitle {
+    color: $text-muted;
+    margin-top: 1;
+}
+
+#content-area {
+    height: 1fr;
+    padding: 0;
+}
+
+.step-pane {
+    height: 1fr;
+    padding: 1 2;
+}
+
+#path-actions {
+    height: auto;
+    padding: 0 2 1 2;
+}
+
+/* ── Form fields ── */
+.field-group {
+    margin-bottom: 1;
+}
+
+.field-label {
+    color: $accent;
+    margin-bottom: 0;
+}
+
+.field-hint {
+    color: $text-muted;
+    margin-bottom: 1;
+}
+
+Input {
+    margin-bottom: 1;
+}
+
+/* ── Buttons ── */
+.run-btn {
+    margin-top: 1;
+    min-width: 14;
+}
+
+.validate-btn {
+    margin-top: 1;
+    margin-right: 1;
+    min-width: 12;
+}
+
+Button.success {
+    background: $success;
+}
+
+Button.error {
+    background: $error;
+}
+
+/* ── Log panel ── */
+#log-panel {
+    height: 10;
+    border-top: solid $primary-darken-2;
+    background: $surface-darken-1;
+    transition: height 0.3s;
+}
+
+#log-panel.expanded {
+    height: 50%;
+}
+
+#log-header-container {
+    background: $primary-darken-3;
+    height: 1;
+}
+
+#log-header {
+    color: $text-muted;
+    padding: 0 2;
+    width: 1fr;
+    text-style: bold;
+    content-align: left middle;
+}
+
+.log-btn {
+    min-width: 10;
+    height: 1;
+    border: none;
+    padding: 0 1;
+    background: $primary-darken-1;
+    color: $text;
+}
+
+.log-btn:hover {
+    background: $primary;
+}
+
+RichLog {
+    height: 1fr;
+    background: $surface-darken-1;
+    padding: 0 1;
+}
+
+/* ── Metric cards (finetune) ── */
+#metric-bar {
+    height: 3;
+    margin: 1 0;
+}
+
+.metric-card {
+    background: $panel;
+    border: solid $primary-darken-1;
+    padding: 0 1;
+    margin-right: 1;
+    min-width: 14;
+    height: 3;
+    content-align: center middle;
+    text-align: center;
+}
+
+.metric-label {
+    color: $text-muted;
+    text-style: bold;
+}
+
+.metric-value {
+    color: $accent;
+    text-style: bold;
+}
+
+/* ── Welcome ── */
+#welcome-body {
+    padding: 1 0;
+    color: $text;
+}
+
+.badge {
+    background: $primary;
+    color: $text;
+    padding: 0 1;
+    margin-right: 1;
+}
+
+/* ── Section divider ── */
+.section-divider {
+    border-top: dashed $primary-darken-2;
+    margin: 1 0;
+    height: 1;
+}
+
+/* ── Mode selector ── */
+#run-mode {
+    margin: 1 0;
+    width: 60;
+}
+
+/* ── Setup step ── */
+#run-env-check {
+    min-width: 22;
+}
+
+#run-download {
+    min-width: 22;
+}
+
+#run-all {
+    min-width: 22;
+}
